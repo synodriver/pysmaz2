@@ -30,7 +30,8 @@ jobs:
         pip install cython
     - name: build_whl
       run: |
-        python setup.py build_ext -i --use-cython --use-cffi
+        python setup.py build_ext -i --use-cython
+        python setup.py build_ext -i --use-cffi
     - name: Test with unitest
       run: |
         python tests/test_smaz2.py
